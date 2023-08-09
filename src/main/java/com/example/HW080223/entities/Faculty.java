@@ -1,11 +1,20 @@
 package com.example.HW080223.entities;
 
-import java.util.Objects;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 
+import java.util.Objects;
+@Entity
 public class Faculty {
+    @Id
+    @GeneratedValue
     private long id;
     private String color;
     private String name;
+    public Faculty(){
+
+    }
 
     public Faculty(long id, String color, String name) {
         this.id = id;
